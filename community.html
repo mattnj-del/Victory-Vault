@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Victory Vault - Community</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<h1>Victory Vault Community</h1>
+<h3>Talk Sports With Other Fans</h3>
+
+<nav>
+<a href="index.html">Home</a> |
+<a href="shop.html">Shop</a> |
+<a href="livescores.html">Live Scores</a> |
+<a href="community.html">Community</a> |
+<a href="#">About</a>
+</nav>
+
+<hr>
+</header>
+
+<main>
+
+<section>
+
+<h2>Fan Discussion</h2>
+<p>Share your thoughts about live games, trades, highlights, and everything happening in the sports world.</p>
+
+<h3>Leave a Comment</h3>
+
+<input type="text" id="username" placeholder="Your Name">
+<br><br>
+
+<textarea id="commentInput" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+
+<br><br>
+
+<button onclick="postComment()">Post Comment</button>
+
+</section>
+
+<section>
+
+<h2>Fan Comments</h2>
+
+<div id="commentSection">
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<hr>
+<p>&copy; 2026 Victory Vault. All rights reserved.</p>
+</footer>
+
+<script>
+
+function postComment() {
+
+let name = document.getElementById("username").value;
+let comment = document.getElementById("commentInput").value;
+
+if(name === "" || comment === ""){
+alert("Please enter your name and comment.");
+return;
+}
+
+let commentBox = document.createElement("p");
+
+commentBox.innerHTML = "<strong>" + name + ":</strong> " + comment;
+
+document.getElementById("commentSection").appendChild(commentBox);
+
+document.getElementById("commentInput").value = "";
+
+}
+
+</script>
+
+</body>
+</html>
