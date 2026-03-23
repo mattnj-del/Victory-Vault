@@ -129,6 +129,18 @@ and featured events so fans can easily keep track of the biggest competitions.
 In the future, this section will allow users to track their favorite teams and
 quickly see their upcoming games, recent results, and current standings. 
 </p>
+   <!-- JavaScript -->
+       <h3>Tell us your favorite sport/team/city to allow us to feed you content suited for you!</h3>
+           <br>
+           <input id="userInput"> <br><br>
+           <button onclick="myFunction()">Submit</button>
+           <p id="message"></p>
+           <script>function myFunction() {
+           let userInput = document.querySelector ("#userInput");
+           let message = document.querySelector ("#message");
+           message.innerHTML = "Thank you for submitting your favorite sport!" + userInput.value;
+           }
+           </script>
 
 <table border="1">
 
